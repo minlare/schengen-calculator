@@ -1,0 +1,51 @@
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  column-gap: 50px;
+  padding-left: 20px;
+}
+
+.calendar {
+  .months-container {
+    display: flex !important;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    .month-container {
+      height: auto;
+    }
+  }
+
+  table {
+    td.day {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.day-content {
+  font-size: 16px;
+  &::after {
+    content: attr(data-days-available);
+    display: block;
+    font-size: 11px;
+  }
+}
+
+.trips {
+  list-style: none;
+  padding: 10px;
+
+  > li {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
+
+  ul {
+    padding: 10px 0 0 20px;
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
